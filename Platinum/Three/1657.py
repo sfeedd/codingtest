@@ -1,11 +1,13 @@
 import sys
 
+input = sys.stdin.readline
+
 # 재귀 깊이 해제: 기본 재귀 제한을 10000으로 설정하여 깊은 재귀 호출 허용
 sys.setrecursionlimit(10000)
 
 # 입력부
-n, m = map(int, sys.stdin.readline().split())  # n: 두부 판의 행 개수, m: 두부 판의 열 개수
-tofu = [list(sys.stdin.readline().rstrip()) for _ in range(n)]  # 두부 판의 상태를 저장 (A, B, C, D, F 등급)
+n, m = map(int, input().split())  # n: 두부 판의 행 개수, m: 두부 판의 열 개수
+tofu = [list(input().rstrip()) for _ in range(n)]  # 두부 판의 상태를 저장 (A, B, C, D, F 등급)
 
 # cost: 두부 등급 간의 비용을 담는 2차원 딕셔너리 생성
 cost = dict().fromkeys(['A', 'B', 'C', 'D', 'F'])

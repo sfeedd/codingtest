@@ -1,13 +1,15 @@
 import sys
 
-# 입력받은 두 수 n, k를 변수로 저장 (n은 랜선의 개수, k는 필요한 랜선의 개수)
-n, k = map(int, sys.stdin.readline().split())
+input = sys.stdin.readline
 
-# 다음 줄들에 입력된 랜선의 길이를 리스트에 저장
-lans = list(map(int, sys.stdin.readlines()))    
+# 입력받은 두 수 n, k를 변수로 저장 (n은 랜선의 개수, k는 필요한 랜선의 개수)
+n, k = map(int, input().split())
+
+# 다음 줄들에 입력된 랜선의 길이를 리스트에 저장(랜선 길이 입력)
+lans = list(map(int, input()))    # for문으로 수정하기
 
 # 이분 탐색을 위한 초기값 설정
-# pl은 최소 길이 1, pr은 현재 랜선 중 가장 긴 길이로 설정
+# pl은 최소 길이 1, pr은 현재 랜선 중 가장 긴 길이로 설정(초기 값 설정)
 pl, pr = 1, max(lans)
 ans = 0  # 최종 답을 저장할 변수 초기화
 

@@ -1,12 +1,14 @@
 import sys
 
+input = sys.stdin.readline
+
 # 첫 번째 줄에서 두 개의 정수 N과 M을 입력받습니다.
 # N은 게임 리스트의 요소 개수이고, M은 찾고자 하는 특정 숫자입니다.      
-N, M = map(int, sys.stdin.readline().split())
+N, M = map(int,input().split())
 
 # 게임 리스트를 구성하는 숫자들을 입력받아 리스트에 저장합니다.
 # 게임 리스트는 N개의 정수로 이루어져 있으며, 각 줄에 하나씩 입력됩니다.
-gameList = [int(sys.stdin.readline()) for _ in range(N)]
+gameList = [int(input()) for _ in range(N)]
 
 # 변수 a에 게임 리스트의 첫 번째 요소를 저장합니다.
 # 이는 탐색을 시작할 첫 번째 요소입니다.
